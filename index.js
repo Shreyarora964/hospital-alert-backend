@@ -175,8 +175,6 @@ async function getBrowser() {
 app.get('/api/hospitals', async (req, res) => {
   try {
     //const browser = await getBrowser();
-    const puppeteer = require('puppeteer');
-
     const browser = await puppeteer.launch({
           headless: true,
           args: ['--no-sandbox', '--disable-setuid-sandbox']
