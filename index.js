@@ -123,7 +123,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const puppeteer = require('puppeteer-core');
+const puppeteer = require('puppeteer');
 const chromeLauncher = require('chrome-launcher');
 const fetch = require('node-fetch');
 const nodeFetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
