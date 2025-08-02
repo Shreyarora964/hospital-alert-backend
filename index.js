@@ -164,19 +164,19 @@ app.post('/api/alerts', async (req, res) => {
 });
 
 // Launch Chrome via chrome-launcher and puppeteer-core
-async function getBrowser() {
-  const chrome = await chromeLauncher.launch({ chromeFlags: ['--headless', '--no-sandbox'] });
-  const response = await nodeFetch(`http://localhost:${chrome.port}/json/version`);
-  const { webSocketDebuggerUrl } = await response.json();
-  return puppeteer.connect({ browserWSEndpoint: webSocketDebuggerUrl });
-}
+// async function getBrowser() {
+//   const chrome = await chromeLauncher.launch({ chromeFlags: ['--headless', '--no-sandbox'] });
+//   const response = await nodeFetch(`http://localhost:${chrome.port}/json/version`);
+//   const { webSocketDebuggerUrl } = await response.json();
+//   return puppeteer.connect({ browserWSEndpoint: webSocketDebuggerUrl });
+// }
 
 // Scraping hospitals
 app.get('/api/hospitals', async (req, res) => {
   try {
     //const browser = await getBrowser();
     const browser = await puppeteer.launch({
-          headless: true,
+          headless: false,
           args: ['--no-sandbox', '--disable-setuid-sandbox']
          });
     const page = await browser.newPage();
