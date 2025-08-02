@@ -16,7 +16,7 @@
     "express": "^5.1.0",
     "mongoose": "^8.15.1",
     "node-fetch": "^3.3.2",
-    "puppeteer": "^24.15.0",
+    "puppeteer": "^19.11.1",
     "react-toastify": "^11.0.5"
   },
   "devDependencies": {
