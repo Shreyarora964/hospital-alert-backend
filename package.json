@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-  "postinstall": "chmod +x ./render-build.sh && ./render-build.sh",
+  "postinstall": "node node_modules/puppeteer/install.js",
   "start": "node index.js"
 },
   "keywords": [],
